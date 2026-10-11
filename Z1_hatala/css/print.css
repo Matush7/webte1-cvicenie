@@ -1,0 +1,60 @@
+/* print.css - the CV is printed on one A4 page without navigation and decorations */
+@media print {
+  @page {
+    size: A4;
+    margin: 12mm;
+  }
+
+  body {
+    font-size: 10pt;
+    line-height: 1.4;
+    color: CanvasText;
+    background: Canvas;
+  }
+
+  /* not printed */
+  .skip-link,
+  .site-header,
+  .site-nav,
+  .site-footer,
+  .cv__photo,
+  .skill__bar {
+    display: none;
+  }
+
+  main {
+    max-width: none;
+    padding: 0;
+  }
+
+  h1,
+  h2,
+  h3,
+  a {
+    color: CanvasText;
+  }
+
+  h1 {
+    font-size: 18pt;
+    margin-bottom: 2mm;
+  }
+
+  h2 {
+    font-size: 12pt;
+    margin: 4mm 0 1mm;
+  }
+
+  .cv {
+    gap: 6mm;
+  }
+
+  .cv__side {
+    flex-basis: 55mm;
+    padding: 0;
+    background: none;
+  }
+
+  .cv ul {
+    margin: 0;
+  }
+}

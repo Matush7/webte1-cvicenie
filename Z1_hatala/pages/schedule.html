@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="sk">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <title>Rozvrh | Matúš Hatala</title>
+  <meta name="description" content="Týždenný rozvrh Matúša Hatalu s aktuálnou hodinou, filtrom prednášok a cvičení a postupom semestra.">
+  <meta property="og:title" content="Rozvrh | Matúš Hatala">
+  <meta property="og:description" content="Týždenný rozvrh Matúša Hatalu s aktuálnou hodinou, filtrom prednášok a cvičení a postupom semestra.">
+  <meta property="og:image" content="https://webte1.fei.stuba.sk/~xhatalam1/Z1_hatala/img/og-image.png">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="sk_SK">
+  <link rel="icon" href="../favicon.ico" sizes="any">
+  <link rel="stylesheet" href="../css/styles.css">
+  <link rel="stylesheet" href="../css/print.css" media="print">
+  <script src="../js/script.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#content">Preskočiť na obsah</a>
+
+  <header class="site-header">
+    <span class="monogram" aria-hidden="true">MH</span>
+    <div>
+      <p class="site-header__name">Matúš Hatala</p>
+      <p class="site-header__slogan">Študent aplikovanej informatiky, ktorý rád tvorí appky s AI.</p>
+    </div>
+  </header>
+
+  <nav class="site-nav" aria-label="Hlavná navigácia">
+    <button class="site-nav__toggle" type="button" aria-expanded="false" aria-controls="site-menu">
+      &#9776; Menu
+    </button>
+    <ul class="site-nav__list" id="site-menu">
+        <li><a href="../index.html">Profil</a></li>
+        <li><a href="cv.html">Životopis</a></li>
+        <li><a href="workspace.html">Pracovné prostredie</a></li>
+        <li><a href="schedule.html" aria-current="page">Rozvrh</a></li>
+        <li><a href="map.html">Mapa</a></li>
+    </ul>
+  </nav>
+
+  <main id="content">
+    <h1>Môj rozvrh</h1>
+    <p>Týždenný rozvrh od 7:00 do 21:00. Hodina, ktorá práve prebieha, je zvýraznená žltou.</p>
+
+    <h2>Práve teraz</h2>
+    <p class="message" id="schedule-status">Zapnite JavaScript, zobrazí sa, čo práve prebieha.</p>
+
+    <h2>Týždenný rozvrh</h2>
+    <div class="filter" hidden>
+      Zobraziť:
+      <button type="button" class="btn" data-filter="all" aria-pressed="true">Všetko</button>
+      <button type="button" class="btn" data-filter="lecture" aria-pressed="false">Prednášky</button>
+      <button type="button" class="btn" data-filter="exercise" aria-pressed="false">Cvičenia</button>
+    </div>
+    <p class="message" id="schedule-empty" role="status" hidden>Pre tento filter nie sú v rozvrhu žiadne hodiny.</p>
+
+    <div class="table-scroll" tabindex="0" role="region" aria-label="Rozvrh, posúvajte vodorovne">
+      <table class="schedule">
+        <caption>Rozvrh zimného semestra 2026/2027</caption>
+        <thead>
+          <tr>
+            <th scope="col">Deň</th><th scope="col">7:00</th><th scope="col">8:00</th><th scope="col">9:00</th><th scope="col">10:00</th><th scope="col">11:00</th><th scope="col">12:00</th><th scope="col">13:00</th><th scope="col">14:00</th><th scope="col">15:00</th><th scope="col">16:00</th><th scope="col">17:00</th><th scope="col">18:00</th><th scope="col">19:00</th><th scope="col">20:00</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr data-day="1">
+            <th scope="row">Po</th>
+            <td data-type="free" colspan="4"></td>
+            <td data-type="exercise" data-start="11:00" data-end="12:50" colspan="2"><span class="lesson__name">Webové technológie I</span>Cvičenie, c137<br>K. Žáková<br>11:00&ndash;12:50</td>
+            <td data-type="exercise" data-start="13:00" data-end="14:50" colspan="2"><span class="lesson__name">Operačné systémy</span>Cvičenie, cpu-c<br>M. Jókay<br>13:00&ndash;14:50</td>
+            <td data-type="lecture" data-start="15:00" data-end="16:50" colspan="2"><span class="lesson__name">Lineárna algebra 2</span>Prednáška, cd300<br>J. Šiagiová<br>15:00&ndash;16:50</td>
+            <td data-type="free" colspan="4"></td>
+          </tr>
+          <tr data-day="2">
+            <th scope="row">Ut</th>
+            <td data-type="free" colspan="3"></td>
+            <td data-type="lecture" data-start="10:00" data-end="11:50" colspan="2"><span class="lesson__name">Webové technológie I</span>Prednáška, cd150<br>K. Žáková<br>10:00&ndash;11:50</td>
+            <td data-type="pe" data-start="12:30" data-end="14:10" colspan="2"><span class="lesson__name">Telesná kultúra 5</span>Telesná kultúra, Strelnica<br>L. Jurkovič<br>12:30&ndash;14:10</td>
+            <td data-type="free"></td>
+            <td data-type="lecture" data-start="15:00" data-end="16:50" colspan="2"><span class="lesson__name">Softvérové inžinierstvo</span>Prednáška, cd300<br>O. Gallo<br>15:00&ndash;16:50</td>
+            <td data-type="exercise" data-start="17:00" data-end="17:50"><span class="lesson__name">Softvérové inžinierstvo</span>Cvičenie, cd300<br>O. Gallo<br>17:00&ndash;17:50</td>
+            <td data-type="free" colspan="3"></td>
+          </tr>
+          <tr data-day="3">
+            <th scope="row">St</th>
+            <td data-type="free"></td>
+            <td data-type="lecture" data-start="08:00" data-end="09:50" colspan="2"><span class="lesson__name">Operačné systémy</span>Prednáška, cd300<br>M. Jókay<br>08:00&ndash;09:50</td>
+            <td data-type="free" colspan="3"></td>
+            <td data-type="lecture" data-start="13:00" data-end="14:50" colspan="2"><span class="lesson__name">Webové technológie I</span>Prednáška, cd150<br>K. Žáková<br>13:00&ndash;14:50</td>
+            <td data-type="exercise" data-start="15:00" data-end="16:50" colspan="2"><span class="lesson__name">Lineárna algebra 2</span>Cvičenie, c329<br>P. Viceník<br>15:00&ndash;16:50</td>
+            <td data-type="free" colspan="4"></td>
+          </tr>
+          <tr data-day="4">
+            <th scope="row">Št</th>
+            <td data-type="free" colspan="3"></td>
+            <td data-type="exercise" data-start="10:00" data-end="10:50"><span class="lesson__name">Softvérové inžinierstvo</span>Cvičenie, c137<br>M. Nehéz<br>10:00&ndash;10:50</td>
+            <td data-type="free" colspan="10"></td>
+          </tr>
+          <tr data-day="5">
+            <th scope="row">Pi</th>
+            <td data-type="free" colspan="14"></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <ul class="legend">
+      <li class="lecture">prednáška</li>
+      <li class="exercise">cvičenie</li>
+      <li class="pe">telesná kultúra</li>
+    </ul>
+
+    <h2>Postup semestra</h2>
+    <progress id="semester-progress" max="100" value="0">0 %</progress>
+    <p id="semester-label">Zapnite JavaScript, zobrazí sa postup semestra.</p>
+  </main>
+
+  <footer class="site-footer">
+    <address>
+      <a href="mailto:matus.hatala@stuba.sk">matus.hatala@stuba.sk</a> &middot;
+      <a href="tel:+421911123456">+421 911 123 456</a>
+    </address>
+    <p>&copy; 2026 Matúš Hatala &middot; Webové technológie I, Zadanie č. 1</p>
+    <p>
+      Zdroje: fotka pracovného stola <a href="https://www.makeuseof.com/workspace-setup-sites-work-from-home-or-office-desk/">MakeUseOf</a> &middot;
+      mapa <a href="https://www.openstreetmap.org/copyright">&copy; OpenStreetMap</a> &middot;
+      knižnica <a href="https://leafletjs.com/">Leaflet</a> &middot;
+      písmo <a href="https://fonts.google.com/specimen/Roboto">Roboto</a> (licencia OFL)
+    </p>
+  </footer>
+</body>
+</html>
